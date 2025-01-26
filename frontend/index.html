@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HLK News</title>
+    <style>
+      /* Global Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif; /* Modern, sleek font */
+      }
+
+      /* Background Styling */
+      body {
+        background: linear-gradient(135deg, #1e1e2e, #313a46);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      /* App Container */
+      .app-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        width: 100%;
+        max-width: 1400px;
+      }
+
+      /* Title */
+      .app-title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        padding: 15px 30px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .app-title:hover {
+        transform: scale(1.05);
+      }
+
+      /* News List */
+      .news-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+        width: 100%;
+        padding: 20px;
+      }
+
+      /* News Card */
+      .news-card {
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        transform: scale(1);
+      }
+
+      .news-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+      }
+
+      /* News Image */
+      .news-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .news-card:hover .news-image {
+        transform: scale(1.02);
+      }
+
+      /* News Content */
+      .news-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      /* News Title */
+      .news-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #fff;
+        text-transform: capitalize;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .news-card:hover .news-title {
+        color: #f8c291;
+      }
+
+      /* News Description */
+      .news-description {
+        font-size: 1rem;
+        color: #ccc;
+        line-height: 1.6;
+      }
+
+      /* News Meta */
+      .news-meta {
+        font-size: 0.85rem;
+        color: #aaa;
+      }
+
+      /* Button for Read More */
+      .read-more {
+        background: #f8c291;
+        color: #1e1e2e;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out, transform 0.2s;
+      }
+
+      .read-more:hover {
+        background: #fa983a;
+        transform: scale(1.05);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .app-title {
+          font-size: 2rem;
+        }
+
+        .news-list {
+          grid-template-columns: 1fr;
+        }
+
+        .news-image {
+          height: 180px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
